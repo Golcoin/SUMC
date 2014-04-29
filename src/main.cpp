@@ -47,7 +47,7 @@ unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier 
 static const int64_t nTargetTimespan_legacy = nTargetSpacing * nRetarget; // every 50 blocks
 static const int64_t nInterval = nTargetTimespan_legacy / nTargetSpacing;
 int64_t devCoin = 20 * COIN;
-int nCoinbaseMaturity = 180;
+int nCoinbaseMaturity = 400;
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 
@@ -2090,7 +2090,8 @@ bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot, bool fCheckSig) c
 {
     // These are checks that are independent of context
     // that can be verified before saving an orphan block.
-
+    if(pindexBest->nHeight > 3000)
+        nCoinbaseMaturity = 180; //coinbase maturity change to 180 blocks
     // Size limits
     if (vtx.empty() || vtx.size() > MAX_BLOCK_SIZE || ::GetSerializeSize(*this, SER_NETWORK, PROTOCOL_VERSION) > MAX_BLOCK_SIZE)
         return DoS(100, error("CheckBlock() : size limits failed"));
