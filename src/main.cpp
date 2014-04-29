@@ -2090,7 +2090,7 @@ bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot, bool fCheckSig) c
 {
     // These are checks that are independent of context
     // that can be verified before saving an orphan block.
-    if(pindexBest->nHeight > 3000)
+    if(pindexBest->nHeight > 3000 && pindexBest != NULL)
         nCoinbaseMaturity = 180; //coinbase maturity change to 180 blocks
     // Size limits
     if (vtx.empty() || vtx.size() > MAX_BLOCK_SIZE || ::GetSerializeSize(*this, SER_NETWORK, PROTOCOL_VERSION) > MAX_BLOCK_SIZE)
