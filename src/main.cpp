@@ -49,7 +49,7 @@ unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier 
 static const int64_t nTargetTimespan_legacy = nTargetSpacing * nRetarget; // every 50 blocks
 static const int64_t nInterval = nTargetTimespan_legacy / nTargetSpacing;
 int64_t devCoin = 20 * COIN;
-int nCoinbaseMaturity = 400;
+int nCoinbaseMaturity = 180;
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 
