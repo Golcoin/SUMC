@@ -238,12 +238,25 @@
       </widget>
      </item>
      <item>
+      <spacer name="verticalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
       <widget class="QLabel" name="label_2">
        <property name="text">
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="../../../../DMD/src/qt/bitcoin.qrc">:/images/backg</pixmap>
+        <pixmap resource="../bitcoin.qrc">:/images/backg</pixmap>
        </property>
        <property name="scaledContents">
         <bool>false</bool>
@@ -358,6 +371,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../bitcoin.qrc"/>
+ </resources>
  <connections/>
 </ui>
