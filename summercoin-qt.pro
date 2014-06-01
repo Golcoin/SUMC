@@ -15,17 +15,18 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 }
 
 windows{
-BOOST_LIB_SUFFIX=-mgw48-mt-s-1_55
-BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
-BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
-BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
-BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
+BOOST_LIB_SUFFIX=-mgw48-mt-s-1_53
+BOOST_INCLUDE_PATH=C:/deps/boost_1_53_0
+BOOST_LIB_PATH=C:/deps/boost_1_53_0/stage/lib
+BDB_INCLUDE_PATH=C:/deps/db-6.0.20.NC/build_unix
+BDB_LIB_PATH=C:/deps/db-6.0.20.NC/build_unix
 OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
 OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
 MINIUPNPC_INCLUDE_PATH=C:/deps
-LIBPNG_INCLUDE_PATH=C:/deps/libpng-1.6.8
-LIBPNG_LIB_PATH=C:/deps/libpng-1.6.8/.libs
+LIBPNG_INCLUDE_PATH=C:/deps/libpng-1.6.10
+LIBPNG_LIB_PATH=C:/deps/libpng-1.6.10/.libs
 MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.3
 QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
 }
 # for boost 1.37, add -mt to the boost libraries
